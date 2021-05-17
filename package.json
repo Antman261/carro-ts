@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "format": "prettier --write 'packages/**/*.ts' 'packages/*/!(node_modules)/**/*.ts'",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "bootstrap": "npx lerna bootstrap"
   },
   "devDependencies": {
     "@tsconfig/node14": "^1.0.0",
@@ -16,7 +17,10 @@
     "typescript": "^4.2.4"
   },
   "lint-staged": {
-    "*.ts": ["prettier --write", "eslint --cache --fix"]
+    "*.ts": [
+      "prettier --write",
+      "eslint --cache --fix"
+    ]
   },
   "prettier": {
     "singleQuote": true
